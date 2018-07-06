@@ -8,98 +8,184 @@
     <link rel="stylesheet" href="stylesheets/style.css">
   
   <style>
-.navbar {
-    overflow: hidden;
-    background-color: #333;
-    font-family: Arial, Helvetica, sans-serif;
+.button {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+  cursor: pointer;
+  padding: 0 20px 0 73px;
+  border: none;
+  font: normal 20px/2.4 "Open Sans", Helvetica, sans-serif;
+  color: rgba(255,255,255,0.9);
+  text-transform: capitalize;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(100,138,214,1);
+  -webkit-box-shadow: 0 5px 0 0 rgba(88,116,173,1) ;
+  box-shadow: 0 5px 0 0 rgba(88,116,173,1) ;
+  text-shadow: 0 1px 1px rgba(87,151,180,0.36) ;
+  -webkit-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-.navbar a {
-    float: left;
-    font-size: 16px;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+.button:hover {
+  background: rgba(91,125,193,1);
+  -webkit-box-shadow: 0 5px 0 0 rgba(80,105,155,1) ;
+  box-shadow: 0 5px 0 0 rgba(80,105,155,1) ;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 
-.dropdown {
-    float: left;
-    overflow: hidden;
+.button:active {
+  top: 2px;
+  -webkit-box-shadow: 0 3px 0 0 rgba(80,105,155,1) ;
+  box-shadow: 0 3px 0 0 rgba(80,105,155,1) ;
 }
 
-.dropdown .dropbtn {
-    cursor: pointer;
-    font-size: 16px;    
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
+.button::before {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  content: "";
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  border: 0 solid #018dc4;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  font: normal medium/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: url("http://enjoycss.com/bg-img/custom/21875-v2clm0.png"), rgba(0,0,0,0.05);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-origin: content-box;
+  background-origin: content-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: 30px auto;
+  background-size: 30px auto;
+  text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-    background-color: #1C6EA4;
+.buttont {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: relative;
+  cursor: pointer;
+  padding: 0 20px 0 73px;
+  border: none;
+  font: normal 20px/2.4 "Open Sans", Helvetica, sans-serif;
+  color: rgba(255,255,255,0.9);
+  text-transform: capitalize;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgb(105,192,223);
+  -webkit-box-shadow: 0 5px 0 0 rgb(87,151,180) ;
+  box-shadow: 0 5px 0 0 rgb(87,151,180) ;
+  text-shadow: 0 1px 1px rgba(87,151,180,0.36) ;
+  -webkit-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: top 50ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+.buttont:hover {
+  background: rgba(78,182,216,1);
+  -webkit-box-shadow: 0 5px 0 0 rgba(78,136,160,1) ;
+  box-shadow: 0 5px 0 0 rgba(78,136,160,1) ;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
 }
 
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+.buttont:active {
+  top: 2px;
+  background: rgb(105,192,223)	;
+  -webkit-box-shadow: 0 3px 0 0 rgba(78,136,160,1) ;
+  box-shadow: 0 3px 0 0 rgba(78,136,160,1) ;
+  -webkit-transform-origin: 50% 100% 0;
+  transform-origin: 50% 100% 0;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.show {
-    display: block;
+.buttont::before {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  content: "";
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  border: 0 solid #018dc4;
+  border-right: 1px solid rgba(255,255,255,0.2);
+  font: normal medium/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: url("http://enjoycss.com/bg-img/custom/21875-1huuuuw.png"), rgba(0,0,0,0.05);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-origin: content-box;
+  background-origin: content-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: 30px auto;
+  background-size: 30px auto;
+  text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
 }
 </style>
   
   </head>
 
   <body>
-  
 
-<!-- -->
-    <table>
-      <tr>
-        <td>
-          <img src="images/devopsikonnect.jpg" alt="iKonnect 2018">
-        </td>
-      </tr>
-      <tr>
-        <td>
-        <img src="images/selfietoselfless.jpg" alt="selfie">
-        </td>
-      </tr>
-    </table>
-<!-- -->
-<table class="blueTable">
+<table style="width: 600px; margin-left: auto; margin-right: auto;" border="0" cellspacing="0">
 <tbody>
 <tr>
-<td>Call Us</td>
-<td>Resources</td>
-<td>Web Links</td>
+<td align="center">
+<div class="button">facebook</div>
+<link async href="http://fonts.googleapis.com/css?family=Open%20Sans" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+</td>
+<td align="center">
+<div class="buttont">twitter</div>
+<link async href="http://fonts.googleapis.com/css?family=Open%20Sans" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;" colspan="2"><img src="images/devopsikonnect.jpg" alt="iKonnect 2018"></td>
+</tr>
+<tr>
+<td style="text-align: center;" colspan="2"><img src="images/selfietoselfless.jpg" alt="selfie"></td>
 </tr>
 </tbody>
-</table>
-<!-- -->
+</table>  
+
+
   
   </body>
 
